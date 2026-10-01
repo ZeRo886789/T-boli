@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="40" fill="#1a5d3a"/>
+  <circle cx="100" cy="80" r="32" fill="#e6b887"/>
+  <path d="M60 120 C60 90 80 70 100 70 C120 70 140 90 140 120 C140 140 110 155 100 165 C90 155 60 140 60 120 Z" fill="#1a5d3a"/>
+  <path d="M68 122 C70 112 80 102 100 102 C120 102 130 112 132 122 C132 130 118 140 100 150 C82 140 68 130 68 122 Z" fill="#e6b887"/>
+  <text x="100" y="185" text-anchor="middle" font-family="serif" font-size="14" fill="#e6b887">TBOLI</text>
+</svg>
