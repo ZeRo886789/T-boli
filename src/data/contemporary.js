@@ -1,44 +1,29 @@
 export const contemporaryLife = {
-  title: 'Contemporary Tboli Life',
+  title: 'Contemporary T’boli Life',
   sections: [
     {
       id: 'education',
-      title: 'Education',
+      title: 'Education and cultural transmission',
       description:
-        'Modern education has reached Tboli communities with the establishment of schools and educational programs that blend traditional knowledge with formal learning.',
-      initiatives: [
-        'Tboli Community School',
-        'Multicultural education programs',
-        'Traditional knowledge integration',
-        'Youth cultural workshops',
-      ],
-      challenges: ['Language barriers', 'Access to remote communities', 'Retention of traditional knowledge'],
+        'Modern schooling coexists with community knowledge systems in many T’boli communities, where language, weaving, and local practices continue to be taught across generations.',
+      initiatives: ['Schooling alongside local culture', 'Intergenerational learning', 'Community-based cultural continuity'],
+      challenges: ['Access and remoteness', 'Language maintenance', 'Balancing modern and traditional learning'],
     },
     {
       id: 'community',
-      title: 'Community Life',
+      title: 'Community life',
       description:
-        'Tboli communities today are vibrant and connected, with traditional governance systems coexisting alongside modern community organizations.',
-      initiatives: [
-        'Community-based tourism',
-        'Cooperative farming',
-        'Cultural festivals',
-        'Digital storytelling projects',
-      ],
-      achievements: ['International cultural recognition', 'Sustainable tourism programs', 'Cultural preservation awards'],
+        'T’boli communities continue to live in relation to lakes, forests, and upland settlements while adapting to changing economic and social conditions.',
+      initiatives: ['Community livelihoods', 'Artistic practice', 'Regional cultural identity'],
+      achievements: ['Continuity of weaving traditions', 'Recognition of artisan skills', 'Public cultural visibility'],
     },
     {
       id: 'preservation',
-      title: 'Cultural Preservation',
+      title: 'Cultural preservation',
       description:
-        'Active efforts are being made to preserve and promote Tboli culture through documentation, education, and advocacy.',
-      initiatives: [
-        'Tnalak weaving cooperatives',
-        'Oral history documentation projects',
-        'Traditional music preservation',
-        'Language revitalization programs',
-      ],
-      achievements: ['National cultural heritage recognition', 'UNESCO Intangible Cultural Heritage listing', 'International exhibitions'],
+        'Documentation, education, and public recognition are important tools for preserving T’boli culture, but they must remain grounded in community knowledge and public, verifiable sources.',
+      initiatives: ['Documentation efforts', 'Artisan recognition', 'Public cultural education'],
+      achievements: ['GAMABA recognition', 'T’nalak geographical-indication work', 'Broader public awareness'],
     },
   ],
 };
@@ -48,35 +33,27 @@ export const currentChallenges = {
   challenges: [
     {
       id: 'land-rights',
-      title: 'Land Rights and Ownership',
+      title: 'Land and ancestral-domain concerns',
       description:
-        'Many Tboli communities face challenges regarding land titling and protection of ancestral domain rights against commercial exploitation.',
-      impact: 'Loss of traditional territories and cultural sites',
-      efforts: ['Legal advocacy', 'Community organizing', 'Government partnerships'],
+        'Protection of ancestral land and customary stewardship remains a significant issue for many Indigenous communities in the Philippines, including upland and lake-associated communities such as the T’boli.',
+      impact: 'Pressure on land, resources, and local governance',
+      efforts: ['Community advocacy', 'Legal and political organizing', 'Recognition of customary domains'],
     },
     {
-      id: 'climate-change',
-      title: 'Climate Change Impact',
+      id: 'cultural-transmission',
+      title: 'Cultural transmission',
       description:
-        'Changing weather patterns and extreme weather events affect traditional agriculture and fishing practices, threatening food security.',
-      impact: 'Reduced crop yields, changing water levels, biodiversity loss',
-      efforts: ['Traditional adaptation methods', 'Climate monitoring', 'Sustainable practices'],
+        'The continuity of weaving, language, and oral traditions depends on active intergenerational learning and the sustained value placed on local practice.',
+      impact: 'Risk of knowledge loss without regular community teaching',
+      efforts: ['Intergenerational learning', 'Documentation', 'Public awareness'],
     },
     {
-      id: 'cultural-appropriation',
-      title: 'Cultural Appropriation',
+      id: 'commercialization',
+      title: 'Commercialization and cultural rights',
       description:
-        'Traditional Tnalak designs and cultural symbols are being commercialized without proper recognition or benefit to Tboli communities.',
-      impact: 'Economic loss, cultural dilution, loss of intellectual property rights',
-      efforts: ['Legal protection', 'Brand certification', 'Awareness campaigns'],
-    },
-    {
-      id: 'youth-engagement',
-      title: 'Youth Engagement and Knowledge Transfer',
-      description:
-        'Younger generations are increasingly disconnected from traditional practices and knowledge due to modernization and migration.',
-      impact: 'Risk of losing traditional knowledge and cultural identity',
-      efforts: ['Intergenerational programs', 'Digital documentation', 'Youth cultural camps'],
+        'The visibility of T’nalak and related cultural expressions has increased interest in the market, making fair recognition and benefit-sharing more important.',
+      impact: 'Potential cultural appropriation and unequal benefit distribution',
+      efforts: ['Legal recognition', 'Geographical indication protection', 'Ethical sourcing'],
     },
   ],
 };
@@ -85,24 +62,19 @@ export const preservationEfforts = {
   title: 'Preservation and Revitalization',
   programs: [
     {
-      name: 'Tboli Heritage Foundation',
-      description: 'A non-profit organization dedicated to documenting and preserving Tboli cultural heritage.',
-      focusAreas: ['Documentation', 'Education', 'Advocacy'],
+      name: 'GAMABA recognition',
+      description: 'National recognition for master weavers such as Lang Dulay and Barbara Ofong has helped elevate public understanding of T’nalak craft and community knowledge.',
+      focusAreas: ['Weaving practice', 'Craft recognition', 'Cultural continuity'],
     },
     {
-      name: 'Tnalak Weaving Cooperative',
-      description: 'A cooperative of master weavers working to preserve traditional weaving techniques and provide fair compensation.',
-      focusAreas: ['Craft preservation', 'Economic empowerment', 'Training'],
+      name: 'Geographical indication protection',
+      description: 'The T’nalak Tau Sebu geographical-indication registration reflects legal interest in protecting the origin and identity of the textile tradition.',
+      focusAreas: ['Brand and origin protection', 'Craft identity', 'Community livelihood'],
     },
     {
-      name: 'Lake Sebu Cultural Center',
-      description: 'A museum and cultural center showcasing Tboli history, artifacts, and contemporary works.',
-      focusAreas: ['Museum', 'Education', 'Community space'],
-    },
-    {
-      name: 'Digital Heritage Project',
-      description: 'A collaborative effort to digitize Tboli cultural materials and make them accessible online.',
-      focusAreas: ['Digitization', 'Archive', 'Accessibility'],
+      name: 'Public documentation and education',
+      description: 'Public institutions and educational projects contribute to the documentation and communication of T’boli culture, language, and heritage.',
+      focusAreas: ['Education', 'Documentation', 'Public access'],
     },
   ],
 };

@@ -22,10 +22,11 @@ const TnalakGallery = () => {
 
         <div
           className={`tnalak-gallery-grid ${ isVisible ? 'reveal-visible' : 'reveal-hidden'}`}
+          data-motion="stagger"
         >
           {masterWeavers.map((weaver) => (
-            <div key={weaver.id} className="weaver-card">
-              <div className="weaver-image">
+            <div key={weaver.id} className="weaver-card" data-motion-item>
+              <div className="weaver-image" data-motion="image-hover">
                 <ImageReveal src={weaver.image} alt={weaver.name} />
               </div>
               <div className="weaver-info">

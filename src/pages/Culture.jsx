@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import CultureHero from '../components/culture/CultureHero';
 import CultureGallery from '../components/culture/CultureGallery';
 import ClothingSection from '../components/culture/ClothingSection';
@@ -5,11 +6,15 @@ import CraftsSection from '../components/culture/CraftsSection';
 import MusicSection from '../components/culture/MusicSection';
 import FoodSection from '../components/culture/FoodSection';
 import BeliefsSection from '../components/culture/BeliefsSection';
+import usePageMotion from '../hooks/usePageMotion';
 import '../styles/culture.css';
 
 const Culture = () => {
+  const pageRef = useRef(null);
+  usePageMotion(pageRef);
+
   return (
-    <>
+    <main ref={pageRef}>
       <CultureHero />
       <section className="culture-page-header">
         <div className="container">
@@ -27,7 +32,7 @@ const Culture = () => {
       <MusicSection />
       <FoodSection />
       <BeliefsSection />
-    </>
+    </main>
   );
 };
 

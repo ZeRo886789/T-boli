@@ -18,14 +18,16 @@ const CultureGallery = () => {
           className={`culture-gallery-grid ${
             isVisible ? 'reveal-visible' : 'reveal-hidden'
           }`}
+          data-motion="stagger"
         >
           {culturalCategories.map((category) => (
             <Link
               to={`/culture#${category.id}`}
               key={category.id}
               className="culture-gallery-card"
+              data-motion-item
             >
-              <div className="culture-gallery-image">
+              <div className="culture-gallery-image" data-motion="image-hover">
                 <ImageReveal src={category.image} alt={category.name} />
                 <div className="culture-gallery-overlay" />
               </div>

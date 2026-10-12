@@ -1,10 +1,15 @@
+import { useRef } from 'react';
 import LandHero from '../components/land/LandHero';
 import MindanaoMap from '../components/land/MindanaoMap';
 import GeographicInfo from '../components/land/GeographicInfo';
+import usePageMotion from '../hooks/usePageMotion';
 
 const Land = () => {
+  const pageRef = useRef(null);
+  usePageMotion(pageRef);
+
   return (
-    <main className="land-page">
+    <main className="land-page" ref={pageRef}>
       <LandHero />
 
       <section className="land-location-section">

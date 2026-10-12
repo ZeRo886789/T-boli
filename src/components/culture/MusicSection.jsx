@@ -36,9 +36,9 @@ const MusicSection = () => {
 
           <div className="music-instruments">
             <h3 className="h3">Traditional Instruments</h3>
-            <div className="instruments-grid">
+            <div className="instruments-grid" data-motion="stagger">
               {music.instruments.map((instr) => (
-                <div key={instr.name} className="instrument-card">
+                <div key={instr.name} className="instrument-card" data-motion-item>
                   <h4 className="h4">{instr.name}</h4>
                   <p>{instr.description}</p>
                 </div>
@@ -46,7 +46,7 @@ const MusicSection = () => {
             </div>
           </div>
 
-          <div className="music-image">
+          <div className="music-image" data-motion="image-hover">
             <ImageReveal src="/images/culture/music.webp" alt="Tboli music" />
           </div>
         </div>

@@ -17,7 +17,7 @@ const LandHero = () => {
 
   return (
     <section className="land-hero-section" ref={ref}>
-      <div className="land-hero-background">
+      <div className="land-hero-background" data-motion="parallax-slow">
         <ImageReveal
           src="/images/land/land-and-geography.png"
           alt="T'boli ancestral land and geography"
@@ -37,16 +37,22 @@ const LandHero = () => {
             </span>
           </TextReveal>
 
-          <TextReveal delay={250}>
+          <TextReveal delay={200}>
+            <div className="land-hero-index">
+              <span>02</span> / 10 — LAND
+            </div>
+          </TextReveal>
+
+          <div className="land-hero-divider" />
+
+          <TextReveal delay={350}>
             <h1 className="land-hero-title">
               Land &<br />
               <span>Geography</span>
             </h1>
           </TextReveal>
 
-          <div className="land-hero-divider" />
-
-          <TextReveal delay={400}>
+          <TextReveal delay={500}>
             <p className="land-hero-description">
               The ancestral domain of the T'boli people
               spans the mountainous highlands of South
@@ -55,10 +61,11 @@ const LandHero = () => {
             </p>
           </TextReveal>
 
-          <TextReveal delay={550}>
+          <TextReveal delay={650}>
             <button
               className="land-hero-button"
               onClick={scrollToContent}
+              data-motion="magnetic"
             >
               <span>Explore the land</span>
               <span className="land-button-arrow">→</span>
@@ -73,7 +80,7 @@ const LandHero = () => {
           onClick={scrollToContent}
           aria-label="Scroll to explore"
         >
-          <span>SCROLL TO EXPLORE</span>
+          <span>SCROLL</span>
           <div className="land-scroll-circle">
             ↓
           </div>

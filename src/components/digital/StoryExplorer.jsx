@@ -9,9 +9,8 @@ const StoryExplorer = () => {
 
   const categories = [
     { id: 'all', name: 'All Stories' },
-    { id: 'tudbulul', name: 'Chants' },
-    { id: 'feytoh', name: 'Folk Tales' },
-    { id: 'tboli-epic', name: 'Epics' },
+    { id: 'tudbulul', name: 'Epics' },
+    { id: 'storytelling', name: 'Storytelling' },
   ];
 
   const stories = oralTraditions.traditions.map((tradition) => ({
@@ -21,10 +20,7 @@ const StoryExplorer = () => {
     format: tradition.format,
     length: tradition.length,
     category: tradition.id,
-    content:
-      'This is an excerpt from the ' +
-      tradition.name +
-      '. The full story would be displayed here with text and audio narration.',
+    content: tradition.description,
   }));
 
   const filteredStories =
@@ -32,60 +28,41 @@ const StoryExplorer = () => {
       ? stories
       : stories.filter((story) => story.category === selectedCategory);
 
-  const handleSelect = (story) => {
-    setSelectedStory(story);
-  };
-
-  const handleClose = () => {
-    setSelectedStory(null);
-  };
-
-  const handleCategoryChange = (categoryId) => {
-    setSelectedCategory(categoryId);
-  };
+  const handleSelect = (story) => setSelectedStory(story);
+  const handleClose = () => setSelectedStory(null);
+  const handleCategoryChange = (categoryId) => setSelectedCategory(categoryId);
 
   return (
     <section className="story-explorer-section" ref={ref}>
       <div className="container">
         <h2 className="section-title text-center">Story Explorer</h2>
         <p className="section-description text-center">
-          Discover Tboli oral traditions and folk tales
+          Discover T’boli oral traditions and the role of storytelling in community memory.
         </p>
 
-        <div
-          className={`story-explorer ${ isVisible ? 'reveal-visible' : 'reveal-hidden'}`}
-        >
-          <div className="story-categories">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => handleCategoryChange(cat.id)}
-                className={`story-category-btn ${
-                  selectedCategory === cat.id ? 'active' : ''
-                }`}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
+        <div className={`story-explorer ${isVisible ? 'reveal-visible' : 'reveal-hidden'}`}>
+        <div className={`story-categories`}>
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => handleCategoryChange(cat.id)}
+              className={`story-category-btn ${selectedCategory === cat.id ? 'active' : ''}`}
+              data-motion-item
+            >
+              {cat.name}
+            </button>
+          ))}
+        </div>
 
-          <div className="stories-grid">
-            {filteredStories.map((story) => (
-              <div key={story.id} className="story-card">
-                <div
-                  className="story-card-content"
-                  onClick={() => handleSelect(story)}
-                  style={{ cursor: 'pointer' }}
-                >
+        <div className="stories-grid" data-motion="stagger">
+          {filteredStories.map((story) => (
+            <div key={story.id} className="story-card" data-motion-item>
+                <div className="story-card-content" onClick={() => handleSelect(story)} style={{ cursor: 'pointer' }}>
                   <h3 className="h3">{story.title}</h3>
                   <p>{story.description}</p>
                   <div className="story-meta">
-                    <span>
-                      <strong>Format:</strong> {story.format}
-                    </span>
-                    <span>
-                      <strong>Duration:</strong> {story.length}
-                    </span>
+                    <span><strong>Format:</strong> {story.format}</span>
+                    <span><strong>Length:</strong> {story.length}</span>
                   </div>
                 </div>
               </div>
@@ -94,24 +71,15 @@ const StoryExplorer = () => {
 
           {selectedStory && (
             <div className="story-modal-overlay" onClick={handleClose}>
-              <div
-                className="story-modal"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button className="story-modal-close" onClick={handleClose}>
-                  ×
-                </button>
+              <div className="story-modal" onClick={(e) => e.stopPropagation()}>
+                <button className="story-modal-close" onClick={handleClose}>×</button>
                 <h2 className="h2">{selectedStory.title}</h2>
                 <p>
-                  <strong>Format:</strong> {selectedStory.format} |{' '}
-                  <strong>Duration:</strong> {selectedStory.length}
+                  <strong>Format:</strong> {selectedStory.format} | <strong>Length:</strong> {selectedStory.length}
                 </p>
                 <div className="story-content">
                   <p>{selectedStory.content}</p>
-                  <p>
-                    <strong>Original Description:</strong>{' '}
-                    {selectedStory.description}
-                  </p>
+                  <p><strong>Cultural note:</strong> Information presented here is drawn from documented community sources.</p>
                 </div>
               </div>
             </div>

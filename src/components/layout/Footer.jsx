@@ -25,18 +25,13 @@ const Footer = () => {
               <span className="footer-tagline">DIGITAL HERITAGE</span>
             </div>
             <p className="footer-description">
-              Preserving the cultural heritage of the T'boli people
-              of South Cotabato, Philippines
+              A research-informed digital archive for T’boli heritage, place, and cultural continuity in South Cotabato.
             </p>
           </div>
 
           <nav className="footer-nav">
             {footerLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="footer-link"
-              >
+              <Link key={link.path} to={link.path} className="footer-link">
                 {link.name}
               </Link>
             ))}
@@ -47,31 +42,18 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-copyright">
-            <span className="mono-label">&copy; {currentYear} T'boli Digital Heritage Project</span>
-            <span className="footer-credit">All rights reserved</span>
+            <span className="mono-label">&copy; {currentYear} T’boli Digital Heritage Project</span>
+            <span className="footer-credit">Educational archive and design project</span>
           </div>
 
           <div className="footer-external">
-            <a
-              href="https://www.ncca.gov.ph"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-external-link"
-            >
+            <a href="https://www.ncca.gov.ph" target="_blank" rel="noopener noreferrer" className="footer-external-link">
               NCCA
             </a>
-            <a
-              href="https://ich.unesco.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-external-link"
-            >
-              UNESCO
+            <a href="https://www.ipophil.gov.ph" target="_blank" rel="noopener noreferrer" className="footer-external-link">
+              IPOPHL
             </a>
-            <a
-              href="/sources"
-              className="footer-external-link"
-            >
+            <a href="/sources" className="footer-external-link">
               SOURCES
             </a>
           </div>

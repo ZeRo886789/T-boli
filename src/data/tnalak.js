@@ -1,100 +1,98 @@
 export const tnalakInfo = {
-  title: 'Tnalak: The Dream Weaving',
-  subtitle: 'A Legacy Passed Through Dreams',
+  title: 'T’nalak',
+  subtitle: 'A T’boli textile tradition rooted in abaca fiber, pattern, and memory',
   originStory: [
     {
       id: 1,
-      title: 'The Dream of Fion',
+      title: 'A community tradition',
       content:
-        'According to Tboli mythology, the goddess Fion (also known as Fu In) descended from the sky and fell in love with a mortal Tboli man. She taught the women of the tribe the art of weaving, but she wove only in her dreams. Before returning to the heavens, she gave birth to a child and left behind a loom.',
+        'T’nalak is a T’boli textile traditionally woven from abaca fiber using ikat-style resist dyeing and handloom techniques. Community accounts describe the process as both technical and deeply tied to memory, design, and intergenerational transmission.',
       image: '/images/tnalak/tnalak-01.webp',
     },
     {
       id: 2,
-      title: 'The Sacred Loom',
+      title: 'Dreamed designs and practiced skill',
       content:
-        'The women of the tribe would gather around the sacred loom, waiting for Fion\'s spirit to appear in their dreams. When she appeared, she would weave beautiful patterns that the women would then replicate on their own cloth. This is why the fabric is called "Tnalak" - meaning "to weave in a dream" in the Tboli language.',
+        'A well-known T’boli account links the introduction of woven design to the idea of a dream-guided pattern, often associated with the spirit referred to as Fu Dalu. Whether understood as a spiritual story or a cultural teaching, the craft is grounded in an exacting process of fiber preparation, tie-dyeing, weaving, and finishing.',
       image: '/images/tnalak/tnalak-02.webp',
     },
   ],
   patterns: [
     {
-      id: 'pantaw',
-      name: 'Pantaw (Spirals)',
-      meaning: 'Represents the flow of water, life, and the connection between the earth and the heavens.',
-      color: 'Red',
+      id: 'clouds',
+      name: 'Clouds',
+      meaning: 'A design associated with documented T’nalak weaving traditions and widely cited in NCCA profiles of master weavers.',
+      color: 'Deep black and earth tones',
     },
     {
-      id: 'tukul',
-      name: 'Tukul (Triangles)',
-      meaning: 'Represents mountains, stability, and the strength of the people.',
-      color: 'Black',
+      id: 'hair-bangs',
+      name: 'Hair bangs',
+      meaning: 'A distinct motif documented in T’nalak weaving artistry and associated with master weaver Lang Dulay’s designs.',
+      color: 'Black on natural fiber',
     },
     {
-      id: 'sechadan',
-      name: 'Sechadan (Eye-like patterns)',
-      meaning: 'Protective symbols that ward off evil spirits and negative energy.',
-      color: 'White',
-    },
-    {
-      id: 'kaling',
-      name: 'Kaling (Geometric lines)',
-      meaning: 'Represents the paths of the ancestors guiding the living.',
-      color: 'Red and Black',
+      id: 'butterfly',
+      name: 'Butterfly',
+      meaning: 'A motif identified in established NCCA descriptions of T’nalak designs and pattern naming traditions.',
+      color: 'Natural and dyed contrast',
     },
   ],
   weavingProcess: [
     {
       step: 1,
-      title: 'Harvesting Cotton',
-      description: 'Fresh cotton is harvested from fields and prepared for spinning.',
+      title: 'Preparing the abaca fiber',
+      description: 'The fiber is carefully cleaned and prepared for spinning and weaving.',
     },
     {
       step: 2,
-      title: 'Spinning Thread',
-      description: 'Cotton fibers are spun into delicate threads using traditional methods.',
+      title: 'Tying and resist work',
+      description: 'Portions of the fiber are tied to create the pattern before dyeing, a key part of ikat-style weaving.',
     },
     {
       step: 3,
-      title: 'Preparing Natural Dyes',
-      description: 'Dyes are extracted from plants, roots, and minerals in the surrounding environment.',
+      title: 'Dyeing',
+      description: 'Natural or prepared dyes are used to intensify the pattern and create contrast in the cloth.',
     },
     {
       step: 4,
-      title: 'The Dream',
-      description: 'The weaver waits for the dream vision from the goddess Fion to reveal the patterns.',
+      title: 'Loom setup',
+      description: 'The dyed strands are set for weaving on a loom, and tension is adjusted before the textile is formed.',
     },
     {
       step: 5,
-      title: 'Weaving the Cloth',
-      description: 'Using a backstrap loom, the weaver replicates the dream patterns into the fabric.',
-    },
-    {
-      step: 6,
-      title: 'Completion and Blessing',
-      description: 'The finished cloth is blessed by elders before being used or gifted.',
+      title: 'Weaving and finishing',
+      description: 'The cloth is woven and then finished with careful inspection and trimming.',
     },
   ],
 };
 
 export const masterWeavers = [
- {
-    id: 'lambingas',
-    name: 'Langgaman Lambingas',
-    title: 'Grand Master Weaver',
+  {
+    id: 'lang-dulay',
+    name: 'Lang Dulay',
+    title: 'GAMABA National Living Treasure',
     description:
-      'One of the most renowned Tnalak master weavers, Langgaman learned the craft from her grandmother and has been weaving for over 50 years. Her works have been exhibited internationally.',
-    recognition: ['National Living Treasures Award', 'UNESCO Master Craftsperson'],
+      'Lang Dulay is recognized as a master T’nalak weaver whose designs and craftsmanship are documented by the National Commission for Culture and the Arts.',
+    recognition: ['GAMABA National Living Treasure', 'NCCA profile of a T’boli master weaver'],
     image: '/images/tnalak/tnalak-detail.webp',
   },
   {
-    id: 'buyag',
-    name: 'Boysie Buyag',
-    title: 'Contemporary Master Weaver',
+    id: 'barbara-ofong',
+    name: 'Barbara Ofong',
+    title: 'GAMABA National Living Treasure',
     description:
-      'A younger generation weaver who has modernized Tnalak patterns while maintaining traditional techniques and spiritual significance.',
-    recognition: ['National Commission for Culture and the Arts Award'],
+      'Barbara Ofong is another T’boli artisan recognized for her legacy in weaving and cultural practice.',
+    recognition: ['GAMABA National Living Treasure', 'Documented in NCCA cultural profiles'],
     image: '/images/tnalak/tnalak-weaving.webp',
+  },
+  {
+    id: 'rosie-sula',
+    name: 'Rosie Sula',
+    title: 'GAMABA National Living Treasure',
+    description:
+      'Rosie Sula is widely recognized as a master weaver with enduring significance in T’nalak practice and cultural transmission.',
+    recognition: ['GAMABA National Living Treasure', 'NCCA recognition'],
+    image: '/images/tnalak/tnalak-01.webp',
   },
 ];
 

@@ -6,6 +6,21 @@ const InteractiveMap = () => {
   const [activeMarker, setActiveMarker] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
+    const MARKER_OFFSET_X = 40;
+  const MARKER_OFFSET_Y = 30;
+  const MAP_WIDTH = 500;
+  const MAP_HEIGHT = 400;
+
+  const toSvgCoords = (lat, lng) => {
+    const minLng = 124.65;
+    const maxLng = 125.05;
+    const minLat = 6.0;
+    const maxLat = 6.6;
+    const x = MARKER_OFFSET_X + ((lng - minLng) / (maxLng - minLng)) * (MAP_WIDTH - 2 * MARKER_OFFSET_X);
+    const y = MARKER_OFFSET_Y + ((maxLat - lat) / (maxLat - minLat)) * (MAP_HEIGHT - 2 * MARKER_OFFSET_Y);
+    return { x, y };
+  };
+
   const markers = [
     {
       id: 'lake-sebling',
@@ -51,10 +66,11 @@ const InteractiveMap = () => {
           Explore the locations of Tboli communities and cultural sites
         </p>
 
-        <div
+         <div
           className={`map-wrapper ${
             isVisible ? 'reveal-visible' : 'reveal-hidden'
           }`}
+          data-motion="parallax-slow"
         >
           <div className="interactive-map">
             <svg viewBox="0 0 500 400" className="map-svg">
@@ -72,30 +88,36 @@ const InteractiveMap = () => {
                 d="M100,50 C130,40 160,60 190,70 C220,80 250,100 270,90 C290,80 310,100 330,110 C350,120 370,140 380,160 C390,180 385,200 375,220 C365,240 345,260 330,270 C315,280 295,290 275,295 C255,300 235,305 215,300 C195,295 175,290 155,280 C135,270 115,260 100,245 C85,230 75,210 80,190 C85,170 95,155 105,140 C115,125 125,105 110,85 C125,75 140,70 160,60 C130,70 110,65 100,50 Z"
                 fill="#1a5d3a"
                 opacity="0.3"
+                stroke="#2e8b57"
+                strokeWidth="1.5"
+                data-motion="draw-line"
               />
 
-              {markers.map((marker) => (
-                <g key={marker.id}>
-                  <circle
-                    cx={100 + marker.lat * 30}
-                    cy={100 + marker.lng * 25}
-                    r="8"
-                    fill={marker.id === activeMarker?.id ? '#d4a76a' : '#1a5d3a'}
-                    stroke="#fff"
-                    strokeWidth="2"
-                    onClick={() => handleMarkerClick(marker)}
-                    style={{ cursor: 'pointer' }}
-                  />
+              {markers.map((marker) => {
+                const coords = toSvgCoords(marker.lat, marker.lng);
+                return (
+                  <g key={marker.id}>
+                    <circle
+                      cx={coords.x}
+                      cy={coords.y}
+                      r="8"
+                      fill={marker.id === activeMarker?.id ? '#d4a76a' : '#1a5d3a'}
+                      stroke="#fff"
+                      strokeWidth="2"
+                      onClick={() => handleMarkerClick(marker)}
+                      style={{ cursor: 'pointer' }}
+                    />
                     <text
-                    x={110 + marker.lat * 30}
-                    y={100 + marker.lng * 25}
-                    fontSize="11"
-                    fill="#1a5d3a"
-                  >
-                    {marker.name}
-                  </text>
-                </g>
-              ))}
+                      x={coords.x + 12}
+                      y={coords.y + 4}
+                      fontSize="11"
+                      fill="#1a5d3a"
+                    >
+                      {marker.name}
+                    </text>
+                  </g>
+                );
+              })}
             </svg>
 
             {showModal && activeMarker && (

@@ -12,8 +12,9 @@ const ClothingSection = () => {
 
         <div
           className={`clothing-grid ${isVisible ? 'reveal-visible' : 'reveal-hidden'}`}
+          data-motion="stagger"
         >
-          <div className="clothing-image">
+          <div className="clothing-image" data-motion="image-hover">
             <ImageReveal src="/images/culture/clothing.webp" alt="Tboli clothing" />
           </div>
           <div className="clothing-content">

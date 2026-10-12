@@ -4,7 +4,7 @@ import TextReveal from '../common/TextReveal';
 const TodayHero = () => {
   return (
     <section className="today-hero-section">
-      <div className="today-hero-background">
+      <div className="today-hero-background" data-motion="parallax-slow">
         <ImageReveal
           src="/images/today/today.png"
           alt="Contemporary T'boli life"

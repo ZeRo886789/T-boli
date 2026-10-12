@@ -4,7 +4,7 @@ import TextReveal from '../common/TextReveal';
 const HistoryHero = () => {
   return (
     <section className="history-hero-section">
-      <div className="history-hero-background">
+      <div className="history-hero-background" data-motion="parallax-slow">
         <ImageReveal
           src="/images/history/history.png"
           alt="Historical T'boli"

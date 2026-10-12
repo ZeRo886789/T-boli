@@ -1,103 +1,71 @@
-# Tboli Digital Heritage
+# T’boli Digital Heritage
 
-A digital heritage archive dedicated to preserving and sharing the rich cultural heritage of the Tboli indigenous people of South Cotabato, Philippines.
+A research-informed digital archive presenting T’boli place, practice, and cultural memory in South Cotabato, Philippines.
 
-## Overview
+## Project pitch
 
-The Tboli Digital Heritage project is an interactive web application that documents and showcases the traditions, history, culture, and knowledge of the Tboli people. The project serves as a digital archive for future generations and as an educational resource for anyone interested in indigenous cultures.
+This project responds to a clear need: T’boli heritage is rich, living, and at risk of becoming flattened into generic cultural content if it is not documented carefully and respectfully. T’boli Digital Heritage is an interactive educational website designed to present key aspects of T’boli life—including geography, community, T’nalak weaving, oral traditions, language, and contemporary preservation—through a polished digital archive.
 
-## Features
+The project is not presented as community-authored field research or a formal ethnographic survey. Instead, it translates public, traceable cultural information into a clear and visually rich educational experience. The main objectives are to improve public understanding of the T’boli, highlight the significance of place and textile traditions, and make cultural learning more accessible through navigation, storytelling, and interactive exploration.
 
-- **Interactive Cultural Map**: Explore the geographic landscape and cultural sites of the Tboli territory
-- **Tnalak Weaving Gallery**: Discover the sacred art of Tnalak dream weaving
-- **Historical Timeline**: Journey through the history of the Tboli people
-- **Cultural Gallery**: Explore traditional clothing, jewelry, crafts, music, and food
-- **Indigenous Knowledge**: Learn about the Tboli language, oral traditions, and environmental wisdom
-- **Contemporary Life**: See how the Tboli people are preserving their culture in the modern world
-- **Digital Archives**: Access audio recordings, stories, and visual documentation
+## Main website features
 
-## Navigation
+- Editorial home page and strong visual identity
+- Separate routes for land, people, history, culture, T’nalak, knowledge, today, digital heritage, and sources
+- Cultural map and archive browsing with accessible interactions
+- T’nalak weaving description and pattern-focused storytelling
+- Public-source references and documentation notes
+- Responsive design and page-level user experience
 
-- **Home** (`/`) - Introduction to Tboli heritage
-- **Land** (`/land`) - Geography and landscape of the Tboli territory
-- **People** (`/people`) - The Tboli community and their way of life
-- **History** (`/history`) - Historical journey of the Tboli people
-- **Culture** (`/culture`) - Traditions, clothing, crafts, music, and food
-- **Tnalak** (`/tnalak`) - The sacred art of dream weaving
-- **Knowledge** (`/knowledge`) - Language, oral traditions, and indigenous wisdom
-- **Today** (`/today`) - Contemporary life and preservation efforts
-- **Digital Heritage** (`/digital-heritage`) - Interactive digital archives
-- **Sources** (`/sources`) - References and acknowledgments
+## Technologies used
 
-## Technologies
+- React
+- Vite
+- React Router
+- GSAP
+- CSS and design tokens
 
-- **React** - Frontend framework
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **CSS** - Custom styling with CSS variables and animations
+## Research approach
 
-## Getting Started
+The project is grounded in public and traceable sources, including NCCA cultural profiles, IPOPHL legal notices on T’nalak Tau Sebu protection, and public materials from the Department of Foreign Affairs and related institutions. Where material was uncertain, language has been qualified or reduced to avoid unsupported claims.
 
-### Installation
+This archive intentionally avoids inventing interviews, fabricated community data, or false UNESCO claims. It is designed to be educational and presentation-ready, not a substitute for direct community-led scholarship.
+
+## Getting started
 
 ```bash
 npm install
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`.
-
-### Build
+Then open the local Vite URL shown in the terminal. To build the production app:
 
 ```bash
 npm run build
 ```
 
-### Linting
+## Notes on verification
 
-```bash
-npm run lint
-```
+The project was prepared to be source-aware and respectful, but the local terminal environment used by the editor failed before it could run the real build command. The VS Code terminal returned an environment error stating that it could not find the package `koffi` while starting the shell. This prevented direct npm execution in this session, even though the project files themselves were audited and corrected.
 
-## Project Structure
+## Project structure
 
-```
+```text
 src/
-├── assets/          # Static assets (fonts, icons)
-├── components/
-│   ├── layout/      # Navbar, Footer, PageTransition, ScrollProgress
-│   ├── common/      # Reusable components (SectionTitle, ImageReveal, etc.)
-│   ├── home/        # Home page components
-│   ├── land/        # Land and geography components
-│   ├── people/      # People and community components
-│   ├── history/     # Historical timeline and gallery
-│   ├── culture/     # Cultural sections (clothing, crafts, music, food, beliefs)
-│   ├── tnalak/      # Tnalak weaving components
-│   ├── knowledge/   # Indigenous knowledge components
-│   ├── today/       # Contemporary life components
-│   └── digital/     # Digital heritage interactive components
-├── data/            # Cultural data and content
-├── hooks/           # Custom React hooks
-├── utils/           # Utility functions and constants
-├── styles/          # Global styles and design tokens
-├── pages/           # Page-level components
-├── App.jsx          # Main application component
-└── main.jsx         # Application entry point
+  App.jsx
+  main.jsx
+  components/
+  data/
+  hooks/
+  pages/
+  styles/
+  utils/
+public/
+README.md
+package.json
+vite.config.js
 ```
 
-## Data Sources
+## Source and attribution policy
 
-All cultural data is sourced from community elders, the National Commission for Culture and the Arts (NCCA), and academic research. See the [Sources](/sources) page for more information.
-
-## Contributing
-
-This is an educational project. Contributions and feedback are welcome.
-
-## License
-
-Educational use only. All cultural content is attributed to the Tboli community.
+This archive documents public information, not firsthand ethnographic research. It is designed as a respectful educational presentation with clear limits on what is known and what remains community-owned knowledge.

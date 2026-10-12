@@ -1,14 +1,19 @@
+import { useRef } from 'react';
 import TodayHero from '../components/today/TodayHero';
 import CommunityLife from '../components/today/CommunityLife';
 import Education from '../components/today/Education';
 import ContemporaryPractices from '../components/today/ContemporaryPractices';
 import CurrentChallenges from '../components/today/CurrentChallenges';
 import Preservation from '../components/today/Preservation';
+import usePageMotion from '../hooks/usePageMotion';
 import '../styles/today.css';
 
 const Today = () => {
+  const pageRef = useRef(null);
+  usePageMotion(pageRef);
+
   return (
-    <>
+    <main ref={pageRef}>
       <TodayHero />
       <section className="today-page-header">
         <div className="container">
@@ -21,7 +26,7 @@ const Today = () => {
       <ContemporaryPractices />
       <CurrentChallenges />
       <Preservation />
-    </>
+    </main>
   );
 };
 

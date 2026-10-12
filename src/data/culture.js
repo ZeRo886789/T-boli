@@ -1,168 +1,112 @@
 export const culturalCategories = [
   { id: 'clothing', name: 'Traditional Clothing', image: '/images/culture/clothing.webp' },
-  { id: 'jewelry', name: 'Jewelry & Ornaments', image: '/images/culture/jewelry.webp' },
   { id: 'crafts', name: 'Traditional Crafts', image: '/images/culture/crafts.webp' },
   { id: 'music', name: 'Music & Dance', image: '/images/culture/music.webp' },
   { id: 'food', name: 'Traditional Food', image: '/images/culture/food.webp' },
 ];
 
 export const clothing = {
-  title: 'Traditional Tboli Clothing (Bado)',
+  title: 'Traditional T’boli clothing',
   items: [
     {
-      name: 'Bado sa Tinalak',
+      name: 'T’nalak textile garments',
       description:
-        'Traditional dress made from handwoven Tnalak fabric, featuring the iconic red, black, and white geometric patterns.',
-      significance: 'Worn during important ceremonies and celebrations.',
-      materials: ['Tnalak cloth', 'Bark cloth', 'Natural dyes'],
+        'T’nalak cloth is one of the clearest expressions of T’boli textile culture, and its patterns and colors carry strong meaning and identity within the community.',
+      significance: 'Important in ceremonial and everyday cultural expression.',
+      materials: ['Abaca fiber', 'Handwoven cloth', 'Natural and dyed thread'],
     },
     {
-      name: 'Bado sa Puti',
-      description: 'White traditional clothing worn for everyday use and formal occasions.',
-      significance: 'Represents purity and respect for elders.',
-      materials: ['Cotton', 'Pineapple fiber', 'Abaca'],
-    },
-    {
-      name: 'Headgear (Bongkrik)',
-      description: 'Traditional head covering made from bamboo and rattan.',
-      significance: 'Worn by elders and during ceremonies.',
-      materials: ['Bamboo', 'Rattan', 'Vines'],
+      name: 'Community dress traditions',
+      description: 'Traditional clothing practices in T’boli communities are closely linked to local craft, identity, and social context.',
+      significance: 'Reflects community, season, and occasion.',
+      materials: ['Woven fibers', 'Community-made garments'],
     },
   ],
 };
 
 export const jewelry = {
-    title: 'Tboli Jewelry and Ornaments',
-    items: [
-      {
-        name: 'Lapis-Lapis',
-        description: 'Traditional bracelets made from brass and adorned with colorful stones.',
-        materials: ['Brass', 'Glass beads', 'Stones'],
-        significance: 'Worn during courtship and ceremonies.',
-      },
-      {
-        name: 'Bintak-pakpak',
-        description: 'Necklaces made from metal discs that resemble bird feathers.',
-        materials: ['Brass', 'Silver'],
-        significance: 'Symbol of wealth and status.',
-      },
-      {
-        name: 'Salampid',
-        description: 'Chest ornament worn by warriors, made from brass and precious stones.',
-        materials: ['Brass', 'Gold', 'Precious stones'],
-        significance: 'Worn by warriors and community leaders.',
-      },
-    ],
-  };
-
-export const crafts = {
-  title: 'Traditional Tboli Crafts',
+  title: 'T’boli ornaments and adornment',
   items: [
     {
-      name: 'Bamboo Crafts',
-      description:
-        'The Tboli are skilled in creating various items from bamboo, including musical instruments, containers, and housing materials.',
-      techniques: ['Carving', 'Weaving', 'Basketry'],
-      items: ['Bamboo pipes', 'Containers', 'Musical instruments'],
+      name: 'Brass and beadwork',
+      description: 'Metalcraft and beadwork are notable elements of material culture in the T’boli region and are associated with artisanship and adornment.',
+      materials: ['Brass', 'Beads', 'Metalwork'],
+      significance: 'Expresses craftsmanship and decorative tradition.',
     },
     {
-      name: 'Rattan Weaving',
+      name: 'Textile-based adornment',
+      description: 'Cloth, pattern, and accessory traditions continue to hold social and artistic importance in community life.',
+      materials: ['Textiles', 'Crafted accessories'],
+      significance: 'Related to identity and presentation.',
+    },
+  ],
+};
+
+export const crafts = {
+  title: 'Traditional T’boli crafts',
+  items: [
+    {
+      name: 'T’nalak weaving',
       description:
-        'Creating baskets, mats, and furniture using traditional rattan weaving techniques passed down through generations.',
-      techniques: ['Plaiting', 'Coiling', 'Twining'],
-      items: ['Baskets', 'Mats', 'Furniture'],
+        'T’nalak remains a flagship craft tradition, recognized for its detailed patterns and the technical skill involved in preparing fiber and weaving cloth.',
+      techniques: ['Abaca preparation', 'Tying and resist work', 'Hand weaving'],
+      items: ['Woven cloth', 'Textile goods'],
     },
     {
-      name: 'Wood Carving',
+      name: 'Brass casting and beadwork',
       description:
-        'Hand-carved wooden objects including furniture, decorative items, and ritual objects.',
-      techniques: ['Hand carving', 'Chiseling', 'Sanding'],
-      items: ['Furniture', 'Idols', 'Decorative panels'],
+        'The T’boli also maintain traditions of metalworking and embellishment, including brass and bead-based artistry documented by cultural institutions.',
+      techniques: ['Casting', 'Finishing', 'Adorned craftwork'],
+      items: ['Brass items', 'Beadwork'],
     },
   ],
 };
 
 export const music = {
-  title: 'Tboli Music and Dance',
+  title: 'T’boli music and performance',
   dances: [
     {
-      name: 'Tboli Tribal Dance',
+      name: 'Community performance traditions',
       description:
-        'Traditional dance that tells stories of the Tboli people, often performed during the Kaamulan festival.',
-      instruments: ['Gong (Gandingan)', 'Bamboo percussion', 'Drums'],
-      occasions: ['Harvest festivals', 'Ceremonies', 'Community gatherings'],
-    },
-    {
-      name: 'Tinalik',
-      description:
-        'A gentle courtship dance that demonstrates respect and grace.',
-      instruments: ['Kulintang', 'Flutes', 'Rattles'],
-      occasions: ['Wedding ceremonies', 'Youth gatherings'],
+        'Music and performance remain important in T’boli cultural life, from celebrations to community gatherings and oral traditions.',
+      instruments: ['Local percussion', 'Bamboo instruments', 'Traditional sound-making tools'],
+      occasions: ['Festivals', 'Community events', 'Cultural occasions'],
     },
   ],
   instruments: [
-    { name: 'Kulintang', description: 'A set of gongchairs, melodic percussion instrument.' },
-    { name: 'Gandingan', description: 'Set of four hanging gongs played with sticks.' },
-    { name: 'Baw-ang', description: 'Bamboo cannon that produces loud bangs during celebrations.' },
-    { name: 'Saluray', description: 'Traditional wind instrument made from bamboo.' },
+    { name: 'Percussion and bamboo instruments', description: 'Traditional instruments remain important in T’boli community performance and celebration.' },
   ],
 };
 
 export const food = {
-  title: 'Traditional Tboli Cuisine',
-
+  title: 'Traditional T’boli foodways',
   dishes: [
     {
-      name: 'Pinol',
+      name: 'Local staple foods',
       description:
-        'A traditional rice wine made from fermented rice, served during ceremonies and celebrations.',
-      occasion: 'Ceremonial and social gatherings',
+        'Food traditions are closely tied to local agriculture, seasonal cycles, and the use of surrounding resources.',
+      occasion: 'Daily eating and community gatherings',
     },
     {
-      name: 'Tinutung',
-      description: 'A soup made from various vegetables and fish, cooked in bamboo tubes.',
-      occasion: 'Daily meals and special occasions',
-    },
-    {
-      name: 'Puto',
-      description: 'Traditional rice cake wrapped in banana leaves.',
-      occasion: 'Breakfast and snacks',
-    },
-    {
-      name: 'Inalim',
-      description: 'A porridge made from unhulled rice, often served with fish or vegetables.',
-      occasion: 'Healing rituals and daily meals',
+      name: 'Rice and root-crop meals',
+      description: 'Rice, root crops, and locally sourced ingredients remain central to everyday meals and shared food practices.',
+      occasion: 'Household and community meals',
     },
   ],
 };
 
 export const beliefs = {
-  title: 'Tboli Spiritual Beliefs and Practices',
-
+  title: 'T’boli belief and cultural practice',
   beliefSystem:
-    'The Tboli practice animism, believing that spirits inhabit natural elements such as rivers, mountains, and trees. The supreme creator is called Diyos or Bulol.',
-
+    'T’boli communities maintain a rich system of belief and practice connected to place, ancestors, the natural world, and lived cultural memory.',
   deities: [
-    { name: 'Bulol', description: 'The supreme creator and protector of the Tboli people.' },
-    { name: 'Fon', description: 'Nature spirits that can be found in rivers, trees, and mountains.' },
-    { name: 'Mundo', description: 'Ancestral spirits that guide and protect the living.' },
+    { name: 'Community spiritual traditions', description: 'Belief systems are deeply connected to the land, ancestry, and social life of the T’boli.' },
   ],
-
   rituals: [
     {
-      name: 'Bakha',
-      description: 'A coming-of-age ceremony where young Tboli learn about their cultural responsibilities.',
-      duration: '3 days',
-    },
-    {
-      name: 'Ginam-mang',
-      description: 'A healing ritual conducted by traditional healers using chants and herbal remedies.',
-      duration: '1-2 days',
-    },
-    {
-      name: 'Tangkal',
-      description: 'A ritual to communicate with ancestors and seek blessings for the community.',
-      duration: 'Several hours to days',
+      name: 'Community ceremonies',
+      description: 'Ceremonial life and community practice remain important to T’boli identity and social memory.',
+      duration: 'Varies by occasion',
     },
   ],
 };

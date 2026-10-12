@@ -6,6 +6,12 @@ import ImageReveal from '../common/ImageReveal';
 import SectionTitle from '../common/SectionTitle';
 import { featuredCommunities } from '../../data/communities';
 
+const cardImages = [
+  '/images/people/Guardians of heritage.png',
+  '/images/people/lakeSebu.webp',
+  '/images/people/lakeSeloton.jpg',
+];
+
 const FeaturedHeritage = () => {
   const sectionRef = useRef(null);
 
@@ -44,34 +50,18 @@ const FeaturedHeritage = () => {
   return (
     <section className="featured-section" ref={sectionRef}>
       <div className="container">
-        <SectionTitle
-          title="Featured Heritage"
-          subtitle="02 / Explore"
-          centered
-        />
+        <SectionTitle title="Featured Heritage" subtitle="02 / Explore" centered />
 
         <div className="featured-grid">
           {featuredCommunities.map((community, index) => (
-            <Link
-              to="/people"
-              key={community.id}
-              className="featured-card"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
+             <Link to="/people" key={community.id} className="featured-card" data-motion="magnetic">
               <div className="featured-card-image">
-                <ImageReveal
-                  src={
-                    index === 0
-                      ? '/images/people/tboli-community.webp'
-                      : '/images/people/community-life.webp'
-                  }
-                  alt={community.name}
-                />
+                <ImageReveal src={cardImages[index] || cardImages[0]} alt={community.name} />
               </div>
               <div className="featured-card-content">
                 <h3 className="h3">{community.name}</h3>
                 <p className="featured-card-text">
-                  {community.description.slice(0, 120)}...
+                  {community.description.length > 120 ? `${community.description.slice(0, 120)}...` : community.description}
                 </p>
               </div>
             </Link>

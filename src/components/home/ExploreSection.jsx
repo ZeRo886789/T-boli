@@ -19,7 +19,7 @@ const exploreSections = [
     title: 'The Tboli People',
     description:
       'Learn about the community, their way of life, and their rich cultural heritage.',
-    image: '/images/people/portraits.webp',
+    image: '/images/people/The T\'boli people.png',
     path: '/people',
   },
   {
@@ -103,8 +103,9 @@ const ExploreSection = () => {
               to={item.path}
               key={item.id}
               className="explore-card"
+              data-motion="magnetic"
             >
-              <div className="explore-card-image">
+              <div className="explore-card-image" data-motion="image-hover">
                 <ImageReveal src={item.image} alt={item.title} />
               </div>
               <div className="explore-card-content">

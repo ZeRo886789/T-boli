@@ -4,7 +4,7 @@ import TextReveal from '../common/TextReveal';
 const KnowledgeHero = () => {
   return (
     <section className="knowledge-hero-section">
-      <div className="knowledge-hero-background">
+      <div className="knowledge-hero-background" data-motion="parallax-slow">
         <ImageReveal
           src="/images/knowledge/knowledge.png"
           alt="T'boli language and knowledge"

@@ -3,7 +3,7 @@ import ImageReveal from '../common/ImageReveal';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 const HeritageGallery = () => {
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [ref] = useScrollAnimation({ threshold: 0.2 });
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -12,8 +12,8 @@ const HeritageGallery = () => {
     { id: 'tnalak-2', category: 'tnalak', src: '/images/tnalak/tnalak-02.webp', title: 'Tnalak Weaving' },
     { id: 'clothing', category: 'culture', src: '/images/culture/clothing.webp', title: 'Traditional Clothing' },
     { id: 'jewelry', category: 'culture', src: '/images/culture/jewelry.webp', title: 'Traditional Jewelry' },
-    { id: 'community', category: 'people', src: '/images/people/tboli-community.webp', title: 'Community Gathering' },
-    { id: 'portraits', category: 'people', src: '/images/people/portraits.webp', title: 'Portraits' },
+    { id: 'community', category: 'people', src: '/images/people/The T\'boli people.png', title: 'Community Gathering' },
+    { id: 'portraits', category: 'people', src: '/images/people/Guardians of heritage.png', title: 'Portraits' },
     { id: 'history-1', category: 'history', src: '/images/history/history-01.webp', title: 'Historical Photo 1' },
     { id: 'history-2', category: 'history', src: '/images/history/history-02.webp', title: 'Historical Photo 2' },
   ];
@@ -44,9 +44,7 @@ const HeritageGallery = () => {
       <div className="container">
         <h2 className="section-title text-center">Heritage Gallery</h2>
 
-        <div
-          className={`gallery-filters ${ isVisible ? 'reveal-visible' : 'reveal-hidden'}`}
-        >
+        <div className="gallery-filters" data-motion="stagger">
           {filters.map((filter) => (
             <button
               key={filter.id}
@@ -54,19 +52,22 @@ const HeritageGallery = () => {
               className={`gallery-filter-btn ${
                 activeFilter === filter.id ? 'active' : ''
               }`}
+              data-motion-item
             >
               {filter.name}
             </button>
           ))}
         </div>
 
-        <div className="gallery-grid">
+        <div className="gallery-grid" data-motion="stagger">
           {filteredItems.map((item) => (
-            <button
-              key={item.id}
-              className="gallery-item"
-              onClick={() => handleImageClick(item)}
-            >
+              <button
+                key={item.id}
+                className="gallery-item"
+                onClick={() => handleImageClick(item)}
+                data-motion-item
+                data-motion="image-hover"
+              >
               <ImageReveal src={item.src} alt={item.title} />
               <div className="gallery-item-overlay">
                 <span className="gallery-item-title">{item.title}</span>

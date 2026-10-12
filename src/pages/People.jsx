@@ -1,9 +1,14 @@
+import { useRef } from 'react';
 import PeopleHero from '../components/people/PeopleHero';
 import CommunityGrid from '../components/people/CommunityGrid';
+import usePageMotion from '../hooks/usePageMotion';
 
 const People = () => {
+  const pageRef = useRef(null);
+  usePageMotion(pageRef);
+
   return (
-    <main className="people-page">
+    <main className="people-page" ref={pageRef}>
 
       <PeopleHero />
 

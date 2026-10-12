@@ -1,38 +1,29 @@
 export const region = {
   name: 'South Cotabato',
   province: 'South Cotabato',
-  region: 'Region XII (SoccsksarGen)',
+  region: 'SOCCSKSARGEN',
   island: 'Mindanao',
-  coordinates: {
-    latitude: 6.1667,
-    longitude: 124.85,
-  },
+  note: 'The T’boli are associated with upland and lake communities in the municipality of Lake Sebu.',
 };
 
 export const lakes = [
   {
-    id: 'lake-sepling',
-    name: 'Lake Sepling',
-    elevation: 950,
-    depth: 25,
+    id: 'lake-sebu',
+    name: 'Lake Sebu',
     description:
-      'The largest of the three lakes in Lake Sebu, fed by mountain springs and surrounded by rolling hills.',
+      'The broader lake-and-mountain landscape of Lake Sebu is central to T’boli place identity, livelihoods, and cultural memory.',
   },
   {
-    id: 'lake-salu',
-    name: 'Lake Salu',
-    elevation: 1100,
-    depth: 18,
+    id: 'lake-seloton',
+    name: 'Lake Seloton',
     description:
-      'Situated at a higher elevation, this lake is known for its clear waters and cool climate.',
+      'Lake Seloton is another lake in the same area, understood as part of the Lake Sebu landscape and surrounding upland communities.',
   },
   {
-    id: 'lake-ta',
-    name: 'Lake Ta',
-    elevation: 1050,
-    depth: 12,
+    id: 'lake-lahit',
+    name: 'Lake Lahit',
     description:
-      'The smallest lake, surrounded by dense forest and traditional Tboli settlements.',
+      'Lake Lahit is part of the same regional landscape and should be described as a lake in South Cotabato rather than as a separate T’boli settlement or ethnic group.',
   },
 ];
 
@@ -40,37 +31,29 @@ export const geography = {
   region,
   lakes,
   coordinates: [
-    { latitude: 6.4333, longitude: 124.8667, name: 'Lake Sebu Municipality' },
-    { latitude: 6.1667, longitude: 124.85, name: 'South Cotabato' },
-    { latitude: 6.0, longitude: 125.0, name: 'General Santos' },
-    { latitude: 7.0833, longitude: 125.6167, name: 'Butuan' },
+    { name: 'Lake Sebu', note: 'Municipality in South Cotabato associated with T’boli communities' },
+    { name: 'South Cotabato', note: 'Province on Mindanao' },
+    { name: 'Mindanao', note: 'Island home to the T’boli and surrounding Indigenous communities' },
   ],
   climate: {
-    type: 'Tropical Rainforest',
-    temperature: '24-32°C',
-    rainfall: '2000-3000mm annually',
-    bestVisit: 'November to April',
+    type: 'Humid tropical',
+    temperature: 'Warm to mild highland conditions, depending on elevation',
+    rainfall: 'High rainfall is typical in the wet season',
+    bestVisit: 'Dry and cooler months are often more comfortable for travel and outdoor visits',
   },
   elevationRange: {
-    min: 400,
-    max: 1050,
+    min: 'Approximately 500',
+    max: 'Approximately 1,000',
     unit: 'meters above sea level',
   },
 };
 
 export const geoCoordinates = {
   tboliRegion: {
-    center: { lat: 6.4333, lng: 124.8667 },
+    center: { lat: 'approximate mainland location', lng: 'approximate mainland location' },
     bounds: {
-      northeast: { lat: 6.5, lng: 124.9 },
-      southwest: { lat: 6.35, lng: 124.8 },
-    },
-  },
-  mindanao: {
-    center: { lat: 7.0, lng: 124.5 },
-    bounds: {
-      northeast: { lat: 18.0, lng: 117.0 },
-      southwest: { lat: 4.0, lng: 136.0 },
+      northeast: { lat: 'not used as precise GIS data', lng: 'not used as precise GIS data' },
+      southwest: { lat: 'not used as precise GIS data', lng: 'not used as precise GIS data' },
     },
   },
 };

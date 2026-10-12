@@ -103,7 +103,7 @@ const Hero = () => {
 
       <div className="hero-content container">
         <div ref={titleRef} className="hero-title-group">
-          <span className="mono-label">01 / 08</span>
+          <span className="mono-label">01 / 10</span>
           <h1 className="display-title">
             <span className="title-line">T'BOLI</span>
             <span className="title-line title-line--gold">THREADS</span>
@@ -117,7 +117,7 @@ const Hero = () => {
         </p>
 
         <div className="hero-actions">
-          <Link to="/people" className="btn btn-primary hero-cta">
+          <Link to="/people" className="btn btn-primary hero-cta" data-motion="magnetic">
             <span>EXPLORE HERITAGE</span>
             <span className="hero-cta-arrow" aria-hidden="true">↗</span>
           </Link>

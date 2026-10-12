@@ -4,7 +4,7 @@ import TextReveal from '../common/TextReveal';
 const CultureHero = () => {
   return (
     <section className="culture-hero-section">
-      <div className="culture-hero-background">
+      <div className="culture-hero-background" data-motion="parallax-slow">
         <ImageReveal
           src="/images/culture/culture.png"
           alt="T'boli traditional culture"
